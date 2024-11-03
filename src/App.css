@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.fade {
+  animation: fade 4s ease-in-out;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.custom-underline::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  border-radius: 10px;
+  left: 0;
+  bottom: -4px;
+  background-color: #6b88fc;
+  transition: all 0.5s;
+  color: #d2cdcd;
+}
+
+.custom-underline:hover::before {
+  width: 58%;
+}
+
+.input {
+  background-color: transparent;
+}
